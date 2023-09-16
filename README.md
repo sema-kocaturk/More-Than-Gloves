@@ -57,3 +57,40 @@ COLUMN DESCRIPTIONS
 - win_by_TKO_Doctor_Stoppage: Number of fights won by TKO due to doctor stoppage.
 
 
+Data Reading and Inspection:
+Reading a CSV file into a Pandas DataFrame.
+ınspecting the data using the check_df function, which displays information about the DataFrame's shape, data types, head, tail, missing values, and quantile statistics.
+
+Data Preprocessing:
+Drop columns with "opp" in their names.
+Remove rows where the "Winner" column has the value "Draw."
+Mapping the "Winner" column to binary values, with 'Red' mapped to 0 and 'Blue' mapped to 1.
+
+Feature Selection:
+You identify categorical, high-cardinality categorical, and numerical columns using the grab_col_names function.
+You perform analysis on categorical and numerical columns using cat_summary and num_summary functions, respectively.
+You analyze the relationship between categorical variables and the target variable.
+Handling Outliers:
+
+Define functions for finding and replacing outliers based on the interquartile range (IQR).
+Check for outliers in numerical columns and replace them if found.
+
+Handling Missing Values:
+Identify columns with missing values using the missing_values_table function.
+Fill missing values in numerical columns with their means.
+Fill missing values in categorical columns with the mode.
+
+Encoding Categorical Variables:
+You encode categorical columns using LabelEncoder for machine learning models.
+
+Scaling Numerical Variables:
+You standardize numerical columns to have zero mean and unit variance.
+
+Model Building and Hyperparameter Tuning:
+Split the data into training and testing sets.
+Define a set of machine learning models 
+Perform hyperparameter optimization for each model using GridSearchCV.
+
+Ensemble Learning (Voting Classifier):
+Create a Voting Classifier that combines the predictions of multiple models.
+Evaluate the ensemble model's performance using cross-validation.
